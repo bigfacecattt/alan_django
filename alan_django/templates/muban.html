@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>模板</title>
+</head>
+<body>
+    <h1>模板的内容为{{kobe.name}}</h1>
+    <!-- 模板的内容中 height为{{kobe.height}}
+
+    {% if kobe.height > 180  %}
+    高度超过180
+    {% else %}
+    没有180
+    {% endif %} -->
+
+    {% for i in context.values %}
+        {% if i.height > 190 %} 
+            <p>高个球员</p>
+            <li>姓名为：{{i.name}} 身高为：{{i.height}}</li>
+        {% else %}
+        <p>矮个球员</p>
+        <li>姓名为：{{i.name}} 身高为：{{i.height}}</li>
+        {% endif %}                  
+    {% endfor %}
+
+<!-- 
+    {{context}}
+    {{context.kobe.name}} -->
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>子页面</title>
+</head>
+<body>
+    {% extends "mother.html" %}
+
+    {% block content %}
+    <p>这里是填充的 content block块的内容</p>
+    {% endblock content%}
+
+    {% block ad %}
+    <p>这里是填充的ad block块的内容</p>
+    <ul>列表内容</ul>
+    {% for i in ads %}
+    <li>{{i}} </li>
+    {% endfor %}
+    {% endblock ad %}
+    
+    
+</body>
+</html>

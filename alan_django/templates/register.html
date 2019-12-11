@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户注册</title>
+</head>
+<body>
+    <h1>用户注册</h1>
+    <form action="/app1/register/" method="POST">
+        {% csrf_token %}
+        <p>username:<input type="text" id="user_name" name="username" required="required" />*{{res}}</p>
+        <p>password:<input type="text" id="pass_word" name="password" required="required" />*</p>
+        <p>email:<input type="text" id="e_mail" name="email" /></p>
+        <p><input type="submit" value="register" /></p>
+
+    </from>
+</body>
+</html>

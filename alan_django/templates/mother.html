@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>母模板</title>
+</head>
+<body>
+    {% include 'top.html'%}
+
+    <!-- block是一个块标签  content是标签名称 -->
+    {% block content %} {% endblock content %}
+
+    <p>---------自动化教程---------</p>
+
+    <!-- block是一个块标签  ad是标签名称 -->
+    {% block ad %} {% endblock ad %}
+
+    <!-- block是一个块标签  ad是标签名称 -->
+    {% block default %} 
+    <h3>默认的内容，如果子页面中没有填充此block，则默认展示该内容</h3>
+    {% endblock default %}
+
+    {% include 'end.html' %}
+</body>
+</html>
